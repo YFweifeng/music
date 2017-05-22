@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <script src="js/jquery-3.2.0.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/font.js" type="text/javascript" charset="utf-8"></script>
+	
+</head>
+	<style type="text/css">
+		body,ul,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div,dl,dt,dd,iput{margin:0;padding:0;}
+		body{font-size:13px;font-family: "微软雅黑";}
+		img{border:none;}
+		li{list-style:none;}
+		input,select,textarea{outline:none;}
+		textarea{resize:none;}
+		a{text-decoration:none;color: black;}
+		.fl{
+			float: left;
+		}
+		.fr{
+			float: right;
+		}
+		.clearfix:after {
+		  content:"";
+		  display:block;
+		  clear:both;
+		}
+		.fl{float: left;}
+		.fr{float: right;}
+		.clearfix{zoom:1;}
+		/*主页*/
+		#top{
+			width: 100%;
+			height: 1rem;
+			background: red;
+		}
+		#top .contant {
+			width: 60%;
+			height: 100%;
+			display: inline-block;
+			margin-left: 1rem;
+		}
+		#top .icon{
+			background-repeat: no-repeat;
+			display: inline-block;
+			background-size:cover ;
+			width: 0.6rem;
+			height: 0.6rem;
+			margin-top: 0.3rem;
+		}
+		#top .contant .icon{
+			margin-left: 0.3rem;
+		}
+		#top .icon-person{
+			margin-left: 0.3rem;
+			background-image: url(img/personal.svg);
+		}
+		#top .contant .icon-geren{
+			background-image: url(img/music.png);
+		}
+		#top .contant .icon-more{
+			background-image: url(img/yinyue.svg);
+		}
+		#top .contant .icon-shequ{
+			background-image: url(img/shequ.svg);
+		}
+		#top .icon-search{
+			background-image: url(img/search.svg);
+			
+		}
+		#zhuye {
+			width: 80%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+		}
+		#zhuye .visit {
+			width: 100%;
+			height: 3.5rem;
+			background-image:url(img/visit.jpg) ;
+			background-size:cover ;
+			background-repeat: no-repeat;
+		}
+		#zhuye .touxiang {
+			position: absolute;
+			border-radius: 0.5rem;
+			margin: 1.8rem 0 0 0.2rem;
+			height: 1rem;
+			width: 1rem;
+			background-image:url(img/touxiang.png) ;
+			background-size:cover ;
+			background-repeat: no-repeat;
+		}
+		#zhuye .xinxi{
+			position: absolute;
+			width: 90%;
+			height: 0.5rem;
+			margin: 0 auto;
+			margin: 3rem 0 0 0.2rem;
+		}
+		#zhuye .xinxi .name{
+			color: white;
+			font-size: 0.2rem;
+		}
+		#zhuye .xinxi .level{
+			background-size:cover ;
+			background-repeat: no-repeat;
+			background-image: url(img/level/level0.svg);
+			width: 0.3rem;
+			height: 0.3rem;
+			margin-left: 0.2rem;
+		}
+		#zhuye .xinxi .qiandao{
+			background-size:cover ;
+			background-repeat: no-repeat;
+			background-image: url(img/level/qiandao.svg);
+			width: 0.4rem;
+			height: 0.4rem;
+		}
+		#zhuye #list div{
+			border-bottom: 3px solid #CCCCCC;
+		}
+		#zhuye #list p{
+			margin-left: 0.8rem;
+			height: 0.8rem;
+			line-height: 0.8rem;
+		}
+		#zhuye #list span{
+			background-size:cover ;
+			background-repeat: no-repeat;
+			display: inline-block;
+			width: 0.4rem;
+			height: 0.4rem;
+			position: absolute;
+		    margin-top: 0.2rem;
+		    margin-left: 0.2rem;
+		}
+		#zhuye #list .icon-new{
+			background-image: url(img/personal/new.svg);
+			
+		}#zhuye #list .icon-huiyuan{
+			background-image: url(img/personal/huiyuan.svg);
+			
+		}#zhuye #list .icon-market{
+			background-image: url(img/personal/mall.svg);
+			
+		}#zhuye #list .icon-bao{
+			background-image: url(img/personal/bao.svg);
+			
+		}#zhuye #list .icon-friend{
+			background-image: url(img/personal/haoyou.svg);
+			
+		}#zhuye #list .icon-near{
+			background-image: url(img/personal/didian.svg);
+			
+		}#zhuye #list .icon-pifu{
+			background-image: url(img/personal/pifu.svg);
+			
+		}#zhuye #list .icon-shibie{
+			background-image: url(img/personal/shibie.svg);
+			
+		}#zhuye #list .icon-stop{
+			background-image: url(img/personal/dingshi.svg);
+			
+		}#zhuye #list .icon-naozhong{
+			background-image: url(img/personal/naozhong.svg);
+			
+		}#zhuye #list .icon-car{
+			background-image: url(img/personal/car.svg);
+			
+		}#zhuye #list .icon-yunpan{
+			background-image: url(img/personal/yun.svg);
+			
+		}
+		section{
+			width: 100%;
+			height: 100px;
+		}
+	</style>
+<body>
+	<header id="top">
+		<i class="icon-person icon"></i>
+		<div class="contant">
+			<i class="icon-geren icon"></i>
+			<i class="icon-more icon"></i>
+			<i class="icon-shequ icon"></i>
+		</div>
+		<i class="icon-search icon"></i>
+	</header>
+	<aside id="zhuye">
+		<div class="visit">
+			<div class="touxiang"></div>
+			<div class="xinxi">
+				<ul>
+					<li class="name fl">凡大人的世界观</li>
+					<li class="level fl"></li>
+					<li class="qiandao fr"></li>
+				</ul>
+			</div>
+		</div>
+		<div id="list">
+			<div>
+				<span class="icon-new"></span><p>我的消息</p>
+				<span class="icon-huiyuan"></span><p>会员中心</p>
+				<span class="icon-market"></span><p>商城</p>
+				<span class="icon-bao"></span><p>在线听歌免流量</p>
+			</div>
+			<div>
+				<span class="icon-friend"></span><p>我的好友</p>
+				<span class="icon-near"></span><p>附近的人</p>
+				
+			</div>
+			<div>
+				<span class="icon-pifu"></span><p>个性皮肤</p>
+				<span class="icon-shibie"></span><p>听歌识曲</p>
+				<span class="icon-stop"></span><p>定时停止播放</p>
+				<span class="icon-naozhong"></span><p>音乐闹钟</p>
+				<span class="icon-car"></span><p>驾驶模式</p>
+				<span class="icon-yunpan"></span><p>音乐云盘</p>
+			</div>
+		</div>
+	</aside>
+	<section>
+		
+	</section>
+</body>
+<script type="text/javascript">
+	$('section').click(function(){
+		alert(2)
+		$("#zhuye").css("left","-300px")
+	})
+	$('.icon-person').click(function(){
+		alert(1)
+		$("#zhuye").css("left","0")
+	})
+
+
+</script>
+</html>
